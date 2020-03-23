@@ -94,7 +94,7 @@
                 <!-- CODE PHP> -->
    <div class="resultat">     
     <?php
-
+    include("propre_fonction.php");
 
     if(isset($_POST['dsn'])){
     $taille=$_POST['nc'];
@@ -107,7 +107,7 @@
 
             if(!empty($c1) && !empty($c2) && !empty($c3) && $c1!=$c2 && $c1!=$c3 && $c3!=$c2)
             {
-                if(ctype_digit($taille)){
+                if(verifier_num($taille)){
                      echo'<table>';
             
                 for($i=0;$i<$taille;$i++){
